@@ -44,3 +44,10 @@ ul li{
 .todo i{
   float: right;
 }
+
+ul li:hover{
+  background-color: white;
+}
+.cursor-pointer{
+  cursor: pointer;
+}

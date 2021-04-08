@@ -18,23 +18,22 @@
          <img src="img/boolean.png" alt="logo" width="400px">
         </div>
         <div class="center">
-          <input  type="text" placeholder="Nuovo todo" class="pad-button" >
-          <button type="button" style="color:black" class="pad-button">
+          <input v-model="newTodo" @keyup.enter="clickAggiungi" type="text" placeholder="Nuovo todo" class="pad-button" >   <!-- keyup permettere di usare il tasto enter per aggiungere un elemento alla lista  -->
+          <button @click="clickAggiungi" type="button" style="color:black" class="pad-button">
             <i class="fas fa-times"></i>
             Aggiungi
           </button>
           </div>
           <div class="flex padding ">
             <div class="box">
-              <ul class="todo">
-                <li> elem1
-                  <i class="fas fa-times"></i>
+              <ul v-if='todos.length > 0'class="todo"> <!-- se la lunghezza dell'array è diversa da 0, stampa il contenuto   -->
+                 <li v-for= '(item, i) in todos'> <!-- per avere l'indice -->
+                  {{item}}
+                   <i @click="clickX(i)" class="fas fa-times cursor-pointer"></i> <!-- passo l'indice come parametro d'ingresso alla funzione clickX, per ricerverlo in vue   -->
                 </li>
-
-
-
-
               </ul>
+
+              <h2 v-else class="center">Non ci sono Todo</h2>
 
             </div>
 
