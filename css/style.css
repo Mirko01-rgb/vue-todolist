@@ -1,0 +1,46 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.center{
+ text-align: center;
+
+}
+
+.padding{
+  padding: 20px;
+}
+
+.pad-button{
+  padding: 6px 15px;
+  border-radius: 8px;
+}
+
+.box{
+  min-height: 30px;
+  width: 400px;
+  background-color: #F5F7F7;
+  padding: 20px 30px;
+}
+
+.flex{
+display: flex;
+justify-content: center;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li{
+
+  border-bottom: 1px solid lightgrey;
+  padding: 15px 0;
+}
+
+.todo i{
+  float: right;
+}
